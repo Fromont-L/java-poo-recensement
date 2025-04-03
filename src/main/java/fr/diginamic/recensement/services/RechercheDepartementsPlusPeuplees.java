@@ -21,7 +21,7 @@ import fr.diginamic.recensement.services.comparators.EnsemblePopComparateur;
 public class RechercheDepartementsPlusPeuplees extends MenuService {
 
 	@Override
-	public void traiter(Recensement recensement, Scanner scanner) {
+	public boolean traiter(Recensement recensement, Scanner scanner) {
 
 		System.out.println("Veuillez saisir un nombre de départements:");
 		String nbDeptsStr = scanner.nextLine();
@@ -50,7 +50,7 @@ public class RechercheDepartementsPlusPeuplees extends MenuService {
 			System.out.println(
 					"Département " + departement.getCode() + " : " + departement.getPopulation() + " habitants.");
 		}
-
+		return true;
 	}
 
 }

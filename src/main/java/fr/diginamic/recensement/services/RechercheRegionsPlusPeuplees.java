@@ -21,7 +21,7 @@ import fr.diginamic.recensement.services.comparators.EnsemblePopComparateur;
 public class RechercheRegionsPlusPeuplees extends MenuService {
 
 	@Override
-	public void traiter(Recensement recensement, Scanner scanner) {
+	public boolean traiter(Recensement recensement, Scanner scanner) {
 
 		System.out.println("Veuillez saisir un nombre de régions:");
 		String nbRegionsStr = scanner.nextLine();
@@ -65,7 +65,7 @@ public class RechercheRegionsPlusPeuplees extends MenuService {
 			Region region = regions.get(i);
 			System.out.println("Region " + region.getNom() + " : " + region.getPopulation() + " habitants.");
 		}
-
+		return false;
 	}
 
 }
